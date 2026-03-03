@@ -1,12 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>JS | Variables and Methods</title>
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NoDriver4j — Browser Automation</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>Your html goes here...</h1>
-    <br>See the <a href="README.md">README</a> for project details
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">NoDriver4j</a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="download.html">Download</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Browser Automation,<br /><span>Undetected.</span></h1>
+    <p>
+      A CDP-based automation toolkit with a custom Chromium build.
+      Spoof fingerprints, manage profiles, and run headless tasks
+      from a single desktop app.
+    </p>
+    <div class="hero-buttons">
+      <a href="download.html" class="btn btn-primary">Download</a>
+      <a href="about.html" class="btn btn-secondary">Learn More</a>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section">
+    <h2 class="section-title">Core Features</h2>
+    <p class="section-subtitle">Everything you need to stay undetected.</p>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <h3>Profile Management</h3>
+        <p>
+          Import profiles from CSV, group them, and assign proxies.
+          Each task keeps its own userdata directory for persistent
+          sessions.
+        </p>
+      </div>
+      <div class="feature-card">
+        <h3>Task Execution</h3>
+        <p>
+          Run automation scripts in parallel with live logging,
+          a visual browser viewer, and manual browser mode for
+          debugging.
+        </p>
+      </div>
+      <div class="feature-card">
+        <h3>CAPTCHA Solving</h3>
+        <p>
+          Built-in ReCaptcha solver integration. Automatically
+          detects and solves challenges during navigation.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 NoDriver4j</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — NoDriver4j</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">NoDriver4j</a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="download.html">Download</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- About Intro -->
+  <section class="section about-intro">
+    <h1 class="section-title">About the Project</h1>
+    <p>
+      NoDriver4j is a Java-based browser automation framework built on
+      top of the Chrome DevTools Protocol. Unlike Selenium or Playwright,
+      it pairs a purpose-built JavaFX desktop app with a custom Chromium
+      binary that has fingerprint spoofing compiled directly into the
+      browser source.
+    </p>
+    <p>
+      The result is an automation toolkit where every browser instance
+      presents a unique, realistic fingerprint &mdash; canvas noise,
+      WebGL parameters, audio context values, screen geometry, timezone,
+      locale, and more &mdash; all configurable per-task through simple
+      CLI switches.
+    </p>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <h2 class="section-title">FAQ</h2>
+    <p class="section-subtitle">Common questions about NoDriver4j.</p>
+
+    <div class="faq-list" id="faq-list">
+      <div class="faq-item">
+        <button class="faq-question">Is this a Selenium replacement?</button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Not exactly. Selenium uses the WebDriver protocol which is
+            inherently detectable. NoDriver4j communicates over CDP and
+            ships a patched browser, so it targets use-cases where
+            stealth matters &mdash; account generation, data collection,
+            and similar workflows.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">What platforms are supported?</button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            The desktop app runs on Windows. The custom Chromium binary
+            is currently built for Windows x64. Linux and macOS support
+            is planned for a future release.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">How are fingerprints generated?</button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Fingerprints are sampled from real-world browser data and
+            passed to the Chromium binary via CLI switches. The browser
+            reads these at startup and overrides the relevant APIs at
+            the source level &mdash; no JavaScript injection required.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Do I need to build Chromium myself?</button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            No. Pre-built binaries with all patches applied are included
+            in the installer.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 NoDriver4j</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
